@@ -28,8 +28,8 @@ var helptext =[
 
 func _ready():
 	$SteeringWheel/Panel/Master.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
-	$SteeringWheel/Panel/Music.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sound"))
-	$SteeringWheel/Panel/Sound.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
+	$SteeringWheel/Panel/Music.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
+	# $SteeringWheel/Panel/Sound.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Sound"))
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
@@ -73,4 +73,4 @@ func _on_Music_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"),value)
 
 func _on_Sound_value_changed(value):
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sound"),value)
+	pass #AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Sound"),value)
