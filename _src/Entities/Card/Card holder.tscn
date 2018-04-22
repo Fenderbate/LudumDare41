@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://_src/Entities/Card/card_holder_back.png" type="Texture" id=1]
+[ext_resource path="res://_src/Entities/Card/card_holder_front.png" type="Texture" id=2]
+
+[node name="Card holder" type="Sprite"]
+
+texture = ExtResource( 1 )
+offset = Vector2( -2, 0 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="Front holder" type="Sprite" parent="." index="0"]
+
+visible = false
+z_index = 20
+texture = ExtResource( 2 )
+offset = Vector2( -2, 0 )
+_sections_unfolded = [ "Offset", "Z Index" ]
+
+

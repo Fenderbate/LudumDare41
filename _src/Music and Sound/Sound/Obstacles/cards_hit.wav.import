@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cards_hit.wav-d17d6d417f81465fe3206862b49484ab.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Obstacles/cards_hit.wav"
+source_md5="fcbcd307cce1a78b6bf69240217316f3"
+
+dest_files=[ "res://.import/cards_hit.wav-d17d6d417f81465fe3206862b49484ab.sample" ]
+dest_md5="266343903441c48ca62ed32f6c585a0b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/car_hit.wav-317f5be7f1645b2bfebcf7c4e5d67144.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Obstacles/car_hit.wav"
+source_md5="c3e0946a3210a1413c415b1dc18ca0a6"
+
+dest_files=[ "res://.import/car_hit.wav-317f5be7f1645b2bfebcf7c4e5d67144.sample" ]
+dest_md5="5ad37d355c72a21487c39409d8c3cb4a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/game_start.wav-1eeaca294a0025b2bbf9489a746ad262.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Menu/game_start.wav"
+source_md5="635d9a05e11415b9052022106763e9c4"
+
+dest_files=[ "res://.import/game_start.wav-1eeaca294a0025b2bbf9489a746ad262.sample" ]
+dest_md5="10a6a49fbe303e31e3ebca607a37f690"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

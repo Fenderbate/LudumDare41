@@ -1,0 +1,224 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://_src/Menus/Lose/Lost.gd" type="Script" id=1]
+[ext_resource path="res://background.png" type="Texture" id=2]
+[ext_resource path="res://_src/Font/pixelsix10.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://_src/Entities/Card/Card.tscn" type="PackedScene" id=4]
+[ext_resource path="res://_src/Entities/Card/choose.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 64
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 31
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 144, 28 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 128, 28 )
+
+[node name="Lost" type="Node"]
+
+pause_mode = 2
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="BG" type="Sprite" parent="." index="0"]
+
+visible = false
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Text" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 329.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Aww... You crashed :/
+
+Your score: "
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Retry" type="Area2D" parent="." index="2" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( 362, 436 )
+z_index = 10
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform", "Z Index" ]
+
+[node name="BG2" type="ColorRect" parent="Retry" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -144.0
+margin_top = -28.0
+margin_right = 144.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.2, 0.313726, 0.486275, 1 )
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="Retry" index="1"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -156.0
+margin_top = -32.0
+margin_right = 2.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "R e t r y"
+align = 1
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Retry" index="2"]
+
+shape = SubResource( 3 )
+
+[node name="Quit" type="Area2D" parent="." index="3" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( 884, 436 )
+z_index = 10
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform", "Z Index" ]
+
+[node name="BG" type="ColorRect" parent="Quit" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -128.0
+margin_top = -28.0
+margin_right = 128.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.200562, 0.315438, 0.484375, 1 )
+
+[node name="Label" type="Label" parent="Quit" index="1"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -128.0
+margin_top = -32.0
+margin_right = -2.0
+margin_bottom = 2.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Q u i t"
+align = 1
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quit" index="2"]
+
+shape = SubResource( 4 )
+
+[node name="Card" parent="." index="4" instance=ExtResource( 4 )]
+
+pause_mode = 2
+editor/display_folded = true
+position = Vector2( 640, 600 )
+_sections_unfolded = [ "Collision", "Pause", "Pickable", "Transform", "Z Index" ]
+persistent = true
+image = ExtResource( 5 )
+effect_name = "Chose"
+effect_desc = "What will it be?"
+
+[node name="PickCollision" parent="Card" index="1"]
+
+pause_mode = 2
+_sections_unfolded = [ "Pause" ]
+
+
+[editable path="Card"]

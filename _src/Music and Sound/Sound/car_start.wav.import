@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/car_start.wav-8cced274b9b69674471564d752b84d3e.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/car_start.wav"
+source_md5="191de495ae296f4c4684b9e0df92d406"
+
+dest_files=[ "res://.import/car_start.wav-8cced274b9b69674471564d752b84d3e.sample" ]
+dest_md5="6e29b1a3ec37b2cd42a7523104835caa"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

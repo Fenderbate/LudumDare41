@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/honk.wav-95afcfc0a51ce1111a2dc9e2fc83214d.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Cars/honk.wav"
+source_md5="4a77df0273977881dc197ac100681f1c"
+
+dest_files=[ "res://.import/honk.wav-95afcfc0a51ce1111a2dc9e2fc83214d.sample" ]
+dest_md5="608408abb4b4b4590479a49892cc554b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

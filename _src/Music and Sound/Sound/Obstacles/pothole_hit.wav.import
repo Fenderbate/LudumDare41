@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pothole_hit.wav-3c6331e871dd13597717a1da5a377b07.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Obstacles/pothole_hit.wav"
+source_md5="db598e15c79a854bcc35a74ee9660844"
+
+dest_files=[ "res://.import/pothole_hit.wav-3c6331e871dd13597717a1da5a377b07.sample" ]
+dest_md5="1601222bd8d8c047cf344c837410ef74"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

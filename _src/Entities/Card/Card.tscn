@@ -1,0 +1,158 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://_src/Entities/Card/Card.gd" type="Script" id=1]
+[ext_resource path="res://_src/Entities/Card/card.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://_src/Font/pixelsix14.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://_src/Entities/Card/target.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 76.158, 100.667 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 12 )
+
+[node name="Card" type="Area2D"]
+
+z_index = 10
+z_as_relative = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 4
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index" ]
+persistent = false
+image = null
+effect_name = "Deliciousssssss"
+effect_desc = "This is some description that's a bit more describative then it should be."
+effect = ""
+amount = 0
+
+[node name="Card" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Material", "Transform" ]
+
+[node name="Image" type="Sprite" parent="Card" index="0"]
+
+position = Vector2( 0, -56 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Name" type="Label" parent="Card" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -76.0
+margin_top = 8.0
+margin_right = 75.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Cardname"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Description" type="Label" parent="Card" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -78.0
+margin_top = 50.0
+margin_right = 77.0
+margin_bottom = 125.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "Card Description"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="PickCollision" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 3 )
+
+[node name="DropCollision" type="Area2D" parent="." index="2"]
+
+visible = false
+position = Vector2( 0.158356, 0.333023 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+collision_mask = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropCollision" index="0"]
+
+position = Vector2( -0.000366211, -149 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="DropCollision" index="1"]
+
+position = Vector2( 0, -145.186 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Tween" type="Tween" parent="." index="3"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+
+[connection signal="mouse_exited" from="." to="." method="_on_Card_mouse_exited"]
+
+[connection signal="area_entered" from="DropCollision" to="." method="_on_DropCollision_area_entered"]
+
+[connection signal="area_exited" from="DropCollision" to="." method="_on_DropCollision_area_exited"]
+
+

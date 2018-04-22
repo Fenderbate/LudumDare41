@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/turn_2.wav-6128a2ef0c88b9c19944e2f6bbda1ebc.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Cars/turn_2.wav"
+source_md5="562eaae1d54821d7e7c53763368dd416"
+
+dest_files=[ "res://.import/turn_2.wav-6128a2ef0c88b9c19944e2f6bbda1ebc.sample" ]
+dest_md5="f4b694fc3b1668ad96e5dd8dabf9a5b7"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

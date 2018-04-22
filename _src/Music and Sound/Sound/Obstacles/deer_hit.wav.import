@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/deer_hit.wav-42fd06d69fb9daa6c3212dc08fdc1829.sample"
+
+[deps]
+
+source_file="res://_src/Music and Sound/Sound/Obstacles/deer_hit.wav"
+source_md5="0a7904df5f38dc8c93b798e2e88b1c61"
+
+dest_files=[ "res://.import/deer_hit.wav-42fd06d69fb9daa6c3212dc08fdc1829.sample" ]
+dest_md5="67189ee7ab4507540fba0446e9c4cca3"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

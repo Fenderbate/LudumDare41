@@ -1,0 +1,838 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://_src/Menus/Start/Start.gd" type="Script" id=1]
+[ext_resource path="res://_src/Music and Sound/Music/menu.wav" type="AudioStream" id=2]
+[ext_resource path="res://background.png" type="Texture" id=3]
+[ext_resource path="res://_src/Font/pixelsix10.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://_src/Menus/steering_wheel.png" type="Texture" id=5]
+[ext_resource path="res://_src/Font/pixelsix00.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://_src/Font/pixelsix14.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://_src/Entities/Card/target.png" type="Texture" id=8]
+[ext_resource path="res://_src/Entities/Card/Card.tscn" type="PackedScene" id=9]
+[ext_resource path="res://_src/Entities/Card/steer.png" type="Texture" id=10]
+[ext_resource path="res://_src/Entities/Card/Card holder.tscn" type="PackedScene" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 6 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 114, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 178.105, 36 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 212.455, 36 )
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 168, 32 )
+
+[sub_resource type="RectangleShape2D" id=8]
+
+custom_solver_bias = 0.0
+extents = Vector2( 102.834, 36 )
+
+[sub_resource type="RectangleShape2D" id=9]
+
+custom_solver_bias = 0.0
+extents = Vector2( 104.057, 36 )
+
+[sub_resource type="DynamicFont" id=10]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=11]
+
+size = 48
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="RectangleShape2D" id=12]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=14]
+
+size = 128
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Start" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="0"]
+
+stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = true
+mix_target = 2
+bus = "Music"
+
+[node name="BG" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="SteeringWheel" type="Control" parent="." index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 640.0
+margin_top = 1430.0
+margin_right = 680.0
+margin_bottom = 1470.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Label" type="Label" parent="SteeringWheel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -220.0
+margin_top = -1060.0
+margin_right = 220.0
+margin_bottom = -1000.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Drag the card on one of the options to begin!
+
+Read the how2play page >:("
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Sprite" type="Sprite" parent="SteeringWheel" index="1"]
+
+scale = Vector2( 20, 20 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Tween" type="Tween" parent="SteeringWheel" index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Start" type="Area2D" parent="SteeringWheel" index="3" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( -120, -1254 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform" ]
+
+[node name="Label" type="Label" parent="SteeringWheel/Start" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 76.0
+margin_bottom = 23.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "S t a r t"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/Start" index="1"]
+
+position = Vector2( 112, 35 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Options" type="Area2D" parent="SteeringWheel" index="4" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( 268.685, -1170 )
+rotation = 0.349066
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform" ]
+
+[node name="Label2" type="Label" parent="SteeringWheel/Options" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 121.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "O p t i o n s"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/Options" index="1"]
+
+position = Vector2( 178.02, 37.6278 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="How2Play" type="Area2D" parent="SteeringWheel" index="5" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( -641.37, -1050 )
+rotation = -0.349066
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform" ]
+
+[node name="Label2" type="Label" parent="SteeringWheel/How2Play" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 143.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "H o w 2 P l a y"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/How2Play" index="1"]
+
+position = Vector2( 208.74, 34.4331 )
+shape = SubResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Credits" type="Area2D" parent="SteeringWheel" index="6" groups=[
+"Menu",
+]]
+
+position = Vector2( -120, -1134 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Label" type="Label" parent="SteeringWheel/Credits" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -64.0
+margin_right = 104.0
+margin_bottom = 36.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "C r e d i t s"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/Credits" index="1"]
+
+position = Vector2( 104, 32 )
+shape = SubResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Back" type="Area2D" parent="SteeringWheel" index="7" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( 1101.21, -549.361 )
+rotation = 1.22173
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform" ]
+
+[node name="Label2" type="Label" parent="SteeringWheel/Back" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 132.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "B a c k"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/Back" index="1"]
+
+position = Vector2( 102.372, 31.9694 )
+shape = SubResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Back2" type="Area2D" parent="SteeringWheel" index="8" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( -1170.58, -317.545 )
+rotation = -1.22173
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform" ]
+
+[node name="Label2" type="Label" parent="SteeringWheel/Back2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 132.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "B a c k"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/Back2" index="1"]
+
+position = Vector2( 101.49, 33.3809 )
+shape = SubResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Back3" type="Area2D" parent="SteeringWheel" index="9" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( 441.005, 1185.47 )
+rotation = 2.79253
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Rect", "Textures", "Transform" ]
+
+[node name="Label2" type="Label" parent="SteeringWheel/Back3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 132.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3, 3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "B a c k"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/Back3" index="1"]
+
+position = Vector2( 101.676, 36.5183 )
+shape = SubResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Panel" type="Panel" parent="SteeringWheel" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1096.0
+margin_top = 138.0
+margin_right = 1480.0
+margin_bottom = 577.0
+rect_rotation = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[node name="Hint" type="Label" parent="SteeringWheel/Panel" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -24.0
+margin_right = 342.0
+margin_bottom = 153.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 10 )
+text = "(Use this one with the mouse ^^)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Label" type="Label" parent="SteeringWheel/Panel" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 231.0
+margin_bottom = 201.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 10 )
+text = "Master
+
+Music
+
+Sound"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Master" type="HSlider" parent="SteeringWheel/Panel" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 23.0
+margin_top = 49.0
+margin_right = 323.0
+margin_bottom = 65.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+min_value = -60.0
+max_value = 0.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Rect" ]
+
+[node name="Music" type="HSlider" parent="SteeringWheel/Panel" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 23.0
+margin_top = 109.0
+margin_right = 323.0
+margin_bottom = 125.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+min_value = -60.0
+max_value = 0.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Rect" ]
+
+[node name="Sound" type="HSlider" parent="SteeringWheel/Panel" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 23.0
+margin_top = 169.0
+margin_right = 323.0
+margin_bottom = 185.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 0
+size_flags_vertical = 1
+min_value = -60.0
+max_value = 0.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+editable = true
+tick_count = 0
+ticks_on_borders = false
+focus_mode = 2
+_sections_unfolded = [ "Rect" ]
+
+[node name="H2P" type="Panel" parent="SteeringWheel" index="11"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1180.0
+margin_top = 562.0
+margin_right = -796.0
+margin_bottom = 1074.0
+rect_rotation = -90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Text" type="Label" parent="SteeringWheel/H2P" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 368.0
+margin_bottom = 496.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 11 )
+text = "Drop the cards on cars - either yours or others - and progress as far as you can!"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Next" type="Area2D" parent="SteeringWheel/H2P" index="1" groups=[
+"Menu",
+]]
+
+editor/display_folded = true
+position = Vector2( 407, 256 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/H2P/Next" index="0"]
+
+shape = SubResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="SteeringWheel/H2P/Next" index="1"]
+
+rotation = 1.5708
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Prev" type="Area2D" parent="SteeringWheel/H2P" index="2" groups=[
+"Menu",
+]]
+
+position = Vector2( -24, 256 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SteeringWheel/H2P/Prev" index="0"]
+
+shape = SubResource( 12 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="SteeringWheel/H2P/Prev" index="1"]
+
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+rotation = -1.5708
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Credits2" type="Label" parent="SteeringWheel" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 374.0
+margin_top = 1130.0
+margin_right = 1138.0
+margin_bottom = 1205.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 13 )
+text = "Made by Fenderbate for the 41st Ludum Dare challange
+Theme: combine 2 incompatible genres"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Gamename" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1280.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 14 )
+text = "Car(d) Race"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Card" parent="." index="4" instance=ExtResource( 9 )]
+
+editor/display_folded = true
+position = Vector2( 640, 607 )
+collision_mask = 1
+persistent = true
+image = ExtResource( 10 )
+effect_name = "Steer & Go"
+effect_desc = "Steer or choose an option."
+
+[node name="Image" parent="Card/Card" index="0"]
+
+scale = Vector2( 1.5, 1.5 )
+
+[node name="screen_space_expander" type="Node2D" parent="." index="5"]
+
+position = Vector2( 3032, 4086 )
+
+[node name="Card holder" parent="." index="6" instance=ExtResource( 11 )]
+
+position = Vector2( 641, 587 )
+
+[connection signal="value_changed" from="SteeringWheel/Panel/Master" to="." method="_on_Master_value_changed"]
+
+[connection signal="value_changed" from="SteeringWheel/Panel/Music" to="." method="_on_Music_value_changed"]
+
+[connection signal="value_changed" from="SteeringWheel/Panel/Sound" to="." method="_on_Sound_value_changed"]
+
+
+[editable path="Card"]
